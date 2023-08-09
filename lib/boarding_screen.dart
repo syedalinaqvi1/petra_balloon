@@ -18,7 +18,7 @@ class PetraBallon extends StatefulWidget {
 
 class _PetraBallonState extends State<PetraBallon> {
   String _scanQrcode =
-      '{"ticketNumber": 123456789, "Passenger": "adult", "Date": "2023-07-14"}';
+      '{"selected_pass":"NA","ticketNumber": 123456789, "Passenger": "adult", "Date": "2023-07-14"}';
 
   bool _success = false;
   String _successTest = 'NA';
@@ -92,6 +92,7 @@ class _PetraBallonState extends State<PetraBallon> {
             Map<String, dynamic> json = jsonDecode(jsonString);
             Ticket ticket = Ticket.fromJson(json);
 
+            String selectedPass = ticket.selectedPass;
             String ticketNumber = ticket.ticketNumber.toString();
             String passenger = ticket.passenger;
             String date = ticket.date;
@@ -131,6 +132,12 @@ class _PetraBallonState extends State<PetraBallon> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              Text(
+                                'Selected Pass : $selectedPass',
+                                style: const TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
                               Text(
                                 'Boarding Number : $ticketNumber',
                                 style: const TextStyle(

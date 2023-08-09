@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:petra_balloon/boarding_screen.dart';
-import 'package:petra_balloon/ticket_screen.dart';
+//import 'package:petra_balloon/ticket_screen.dart';
 
 void main() => runApp(
       const MaterialApp(
@@ -26,39 +26,39 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: SizedBox(
-                  height: height / 9,
-                  width: width * 0.8,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TicketScreen()),
-                      );
-                    },
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(36.0),
-                          side: const BorderSide(
-                            color: Color.fromRGBO(170, 4, 4, 1),
-                          ),
-                        ),
-                      ),
-                      backgroundColor: MaterialStateProperty.all(
-                        const Color.fromRGBO(170, 4, 4, 1),
-                      ),
-                    ),
-                    child: const Text(
-                      'Scan Ticket',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 10),
+              //   child: SizedBox(
+              //     height: height / 9,
+              //     width: width * 0.8,
+              //     child: ElevatedButton(
+              //       onPressed: () {
+              //         Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //               builder: (context) => const TicketScreen()),
+              //         );
+              //       },
+              //       style: ButtonStyle(
+              //         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              //           RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(36.0),
+              //             side: const BorderSide(
+              //               color: Color.fromRGBO(170, 4, 4, 1),
+              //             ),
+              //           ),
+              //         ),
+              //         backgroundColor: MaterialStateProperty.all(
+              //           const Color.fromRGBO(170, 4, 4, 1),
+              //         ),
+              //       ),
+              //       child: const Text(
+              //         'Scan Ticket',
+              //         style: TextStyle(fontSize: 20),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: SizedBox(
